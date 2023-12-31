@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="d-flex flex-wrap justify-content-center px-5 pt-5">
-  {% for task in data %}
+  {% for task in tasks %}
   <div class="col-sm-3">
     <div class="card m-2">
       <div class="card-body">
@@ -11,7 +11,7 @@
           <p class="card-text">Tsk Discription: {{ task.task_description }}</p>
         <p>
          Task Category : 
-         {% for cat in category %}
+         {% for cat in task.category.all %}
          {{ cat.category_name }} 
 
          {% endfor %}
